@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+#boton-desplegar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: #15eb18;
+    font-size: 1.5rem;
+    cursor: pointer;
+    animation-name: boton-desplegar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes boton-desplegar {
+    0% {
+        box-shadow: none;
+    }
+
+    25% {
+        box-shadow: 0px 0px 20px #27ab29;
+    }
+
+    50% {
+        box-shadow: none;
+    }
+
+    75% {
+        box-shadow: 0px 0px 20px #15eb18;
+    }
+
+    100%{
+        box-shadow: none;
+    }
+}
+
+.navbar{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    transition: 0.5s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    content-visibility: auto;
+    animation-name: animation-navbar;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-navbar{
+    0% {
+        box-shadow: none;
+    }
+
+    25% {
+        box-shadow: 0px 0px 20px #27ab29;
+    }
+
+    50% {
+        box-shadow: none;
+    }
+
+    75% {
+        box-shadow: 0px 0px 20px #15eb18;
+    }
+
+    100%{
+        box-shadow: none;
+    }
+}
+
+.home-container, .about-container, .setting-container, .menu-container, .social-container{
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px 10px 15px;
+    cursor: pointer;
+    transition: 0.15s;
+    user-select: none;
+}
+
+.home-container:hover, .about-container:hover, .setting-container:hover, .menu-container:hover, .social-container:hover{
+    transform: translateX(10px);
+    border-left: 1px solid #15eb18;
+    background-color: #15eb1835;
+}
+
+p{
+    color: #15eb18;
+    font-size: 1rem;
+}
+
+i{
+    color: #15eb18;
+    font-size: 1.5rem;
+}
+
+.options{
+    position: absolute;
+    border-radius: 20px;
+    transition: 0.5s;
+    content-visibility: auto;
+    animation-name: animation-navbar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    visibility: hidden;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.file{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: 0.2s;
+}
+
+.file:hover{
+    transform: translateX(10px);
+    border-left: 1px solid #15eb18;
+    background-color: #15eb1835;
+    transition: 0.15s;
+    user-select: none;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.iconos-social{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconos-social .bi{
+    font-size: 2rem;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.iconos-social .bi:hover{
+    transform: scale(1.2);
+}
